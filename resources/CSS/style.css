@@ -1,7 +1,7 @@
 /* Universal Styles */
 
 html {
-  font-family: "Helvetica", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
 
@@ -100,28 +100,126 @@ header .mobile {
 
 }
 
+/* Hero */
 
-
-
-/* Footer */
-
-footer {
-  background-color: black;
-  padding: 16px 24px;
+.hero-banner {
+  background-color: lightgray;
+  padding-top: 96px;
 }
 
-footer .content {
-  color: gray;
-  display: flex;
-  font-size: .75rem;
+.hero-copy {
+  display: inline-flex;
+  flex-flow: column;
+  justify-content: space-between;
+  vertical-align: middle;
+  font-family: inherit;
 }
 
-footer .copyright {
-  flex-grow: 1;
+.hero-banner img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 60%;
+  margin: 2rem 2.5rem 2rem 1.5rem;
+  flex-shrink: 0;
 }
+
+.hero-banner h1 {
+    font-size: 38px;
+    font-weight: bold;
+    color: #575656;
+}
+
+.hero-banner h3 {
+    margin: 1.5rem 0;
+    font-size: 20px;
+    color: #575656;
+}
+
+.hero-banner .hero-copy {
+    width: 30%;
+    box-sizing: border-box;
+    padding-right: 24px;
+}
+
+.hero-img {
+    padding: 32px 24px;
+    margin-top: 64px;
+}
+
+.hero-banner p, .hero-img p {
+    margin-bottom: 1.5rem;
+}
+
+.start {
+    flex: auto;
+    color: white;
+    background-color: #575656;
+    text-align: center;
+    padding: 8px;
+    height: 100%;
+    width: 75%;
+    text-decoration: none;
+    font-weight: 50;
+}
+
 
 @media only screen and (max-width: 760px) {
-  footer .content {
-    font-size: .625rem;
-  }
+   .hero-banner img {
+      width: 100%;
+      margin: 0;
+   }
+
+   .hero-img {
+      padding: 0;
+      margin-top: 0;
+   }
+
+   .hero-banner {
+      padding-top: 80px;
+   }
+
+   .hero-banner .hero-copy {
+       width: 100%;
+       text-align:center;
+       box-sizing: border-box;
+       padding-right: 32px 16px;
+       margin-top: 16px;
+   }
+
+   .start {
+     margin-left: 12%;
+     margin-bottom: 32px;
+   }
+}
+
+@media only screen and (min-width: 760px) and (max-width: 1200px) {
+    .hero-banner .hero-copy {
+        width: 100%;
+        text-align:center;
+        box-sizing: border-box;
+        padding-right: 0;
+      }
+
+      .hero-banner img {
+         width: 100%;
+         margin: 0;
+      }
+
+      .hero-img {
+          padding: 0;
+          margin-top: 0;
+      }
+
+      .hero-banner .hero-copy {
+          width: 100%;
+          text-align:center;
+          box-sizing: border-box;
+          padding-right: 32px 16px;
+          margin-top: 32px;
+      }
+
+      .start {
+        margin-left: 12%;
+        margin-bottom: 32px;
+      }
 }
