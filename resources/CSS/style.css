@@ -338,7 +338,6 @@ header .mobile {
     .content-box img {
       width: 100%;
       height: auto;
-      display: fixed;
     }
 
     .content-box .side-text {
@@ -429,6 +428,10 @@ header .mobile {
     visibility: hidden;
   }
 
+  .course {
+    display: none;
+  }
+
   .courses-list {
     display: flex;
     justify-content: space-between;
@@ -467,10 +470,12 @@ header .mobile {
   width: 100%;
   object-fit: contain;
   margin-left: 24px;
+  margin-right: 24px;
 }
 
 .left-section h6 p {
   color: lightgray;
+  display: flex;
 }
 
 .left-section {
@@ -478,16 +483,53 @@ header .mobile {
 }
 
 .right-section {
-  width: 30%
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+}
+
+.first-info {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+.first-info h6 {
+  vertical-align: middle;
+}
+
+.first-info img {
+  width: 35%;
+  padding: 16px;
+}
+
+.info_box {
+  display: flex;
+  flex-direction: row;
+}
+
+.info_box img {
+  padding: 16px;
+}
+
+.thesis {
+  padding: 24px;
 }
 
 .thesis p {
   padding-top: 16px;
   padding-bottom: 0px;
+  color: gray;
+  font-style: italic;
+  font-weight: 50;
 }
 
 .thesis h6 {
   padding-top: 24px;
+  font-size: 24px;
+  color: gray;
 }
 
 .thesis h2 {
@@ -503,7 +545,19 @@ header .mobile {
   margin-top: 32px;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 1100px) {
+  .first-info p {
+    display: none;
+    vertical-align: middle;
+  }
+
+  .info_box p {
+    display: none;
+    vertical-align: center;
+  }
+}
+
+@media only screen and (max-width: 900px) {
   .flex .right-section {
     display: none;
   }
@@ -521,6 +575,44 @@ header .mobile {
   .flex .left-section h6 {
     display: none;
   }
+
+  .first-info {
+    display: none;
+  }
+
+  .info_box {
+    display: none;
+  }
+
+  .left-section h6 p {
+    display: none;
+  }
 }
 
 /* Footer Section */
+
+footer{
+  background-color: white;
+}
+.footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 5rem;
+  align-items: center;
+}
+
+.footer-left{
+  margin-left: 1.5rem;
+  color: gray;
+}
+
+.footer-right{
+  text-align: right;
+  margin-right: 2rem;
+  color: gray;
+}
+
+.footer-right span{
+  margin-left: .5rem;
+}
